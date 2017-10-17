@@ -25,11 +25,13 @@ RSpec.describe PrintsController, type: :controller do
           .and_return(label_printer_double)
 
         post :create,
-          location_id: @location.id,
-          printer_id: @printer.id,
-          barcode_type: "1D",
-          print_child_barcodes: 1,
-          copies: 1
+          params: {
+            location_id: @location.id,
+            printer_id: @printer.id,
+            barcode_type: "1D",
+            print_child_barcodes: 1,
+            copies: 1
+        }
 
         expect(response).to redirect_to locations_path
       end
@@ -43,10 +45,12 @@ RSpec.describe PrintsController, type: :controller do
           .and_return(label_printer_double)
 
         post :create,
-          location_id: @location.id,
-          printer_id: @printer.id,
-          barcode_type: "1D",
-          copies: 1
+          params: {
+            location_id: @location.id,
+            printer_id: @printer.id,
+            barcode_type: "1D",
+            copies: 1
+        }
 
         expect(response).to redirect_to locations_path
       end
