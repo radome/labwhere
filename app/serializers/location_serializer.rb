@@ -2,11 +2,10 @@
 # includes created_at and updated_at
 class LocationSerializer < ActiveModel::Serializer
   
-  self.root = false
-
   attributes :id, :name, :parent, :container, :status, :location_type_id, :audits, :barcode, :rows, :columns, :parentage
 
   include SerializerDates
+  include Rails.application.routes.url_helpers
 
   ##
   # If the parent is not valid return its name

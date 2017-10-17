@@ -2,11 +2,10 @@
 # includes created_at and updated_at
 class LocationTypeSerializer < ActiveModel::Serializer
 
-  self.root = false
-
   attributes :id, :name, :locations, :audits
 
   include SerializerDates
+  include Rails.application.routes.url_helpers
 
   ##
   # Link to locations for current location type

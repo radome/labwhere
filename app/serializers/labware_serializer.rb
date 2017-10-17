@@ -2,11 +2,10 @@
 # Serializer for the Labware
 class LabwareSerializer < ActiveModel::Serializer
 
-  self.root = false
-
   attributes :barcode, :audits
 
   include SerializerDates
+  include Rails.application.routes.url_helpers
 
   has_one :location
 
