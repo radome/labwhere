@@ -81,6 +81,8 @@ group :development, :test do
   gem 'poltergeist'
   gem 'teaspoon-jasmine'
 
+  # Implements `assigns`
+  gem 'rails-controller-testing'
 end
 
 group :test do
