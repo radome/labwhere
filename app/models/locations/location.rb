@@ -166,6 +166,6 @@ class Location < ActiveRecord::Base
   def has_been_used
     return unless used?
     errors.add :location, "Has been used"
-    false
+    throw(:abort)
   end
 end
