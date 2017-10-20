@@ -14,7 +14,7 @@ class Search < ActiveRecord::Base
 private
 
   def bump_count
-    increment! :search_count
+    increment!(:search_count, touch: true)
   end
 
 end
