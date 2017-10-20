@@ -56,7 +56,7 @@ group :development do
   gem 'raml_ruby', '~> 0.1.1'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+  gem 'web-console'
 end
 
 # Use Capistrano for deployment
