@@ -278,7 +278,7 @@ DEPENDENCIES
   active_model_serializers
   byebug
   capybara
-  coffee-rails (~> 4.2.1)
+  coffee-rails
   database_cleaner
   exception_notification
   factory_girl_rails
