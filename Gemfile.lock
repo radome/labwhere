@@ -282,7 +282,7 @@ DEPENDENCIES
   database_cleaner
   exception_notification
   factory_girl_rails
-  jbuilder (~> 2.0)
+  jbuilder
   jquery-rails
   jquery-turbolinks
   jquery-ui-rails
